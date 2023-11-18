@@ -3,7 +3,7 @@
     <svg id="svg" style=" "> 
     <text
   x="50%"
-  y="60%"
+  y="55%"
   font-size="150"
   text-anchor="middle"
   fill="white"
@@ -37,7 +37,7 @@ export default {
       mouseMoving: false,
       mouse: {
         distances: [],
-        power:10,
+        power:12,
         X: 0,
         Y: 0,
       },
@@ -69,7 +69,7 @@ export default {
       this.displayText = newText;},
 
       handleMouseOver() {
-      this.mouse.power = 130;
+      this.mouse.power = 90;
       this.changeText('I broke things');
     },
     handleMouseOut() {
