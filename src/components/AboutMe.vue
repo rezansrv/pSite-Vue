@@ -28,8 +28,8 @@
       background-color: #111827;
       font-family: Barlow, Barlow fallback, sans-serif;
       padding: 50px;
-      margin-top: 30px;
-    }
+      padding-top: 80px;
+          }
   
     .center {
       max-width: 800px;

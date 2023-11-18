@@ -1,6 +1,6 @@
 <template class="dc">
-  <div>
-    <svg id="svg" style=" "> 
+  <div class="h">
+    <svg id="svg" style="height:0% "> 
     <text
   x="50%"
   y="55%"
@@ -26,7 +26,7 @@ export default {
       dotMatrix: document.createElementNS("http://www.w3.org/2000/svg", 'circle'),
       dots: [],
       lineMatrix: document.createElementNS("http://www.w3.org/2000/svg", 'line'),
-      dotNumber: 200,
+      dotNumber: 207,
       lineNumber: 6,
       screenW: 0,
       screenH: 0,
@@ -37,7 +37,7 @@ export default {
       mouseMoving: false,
       mouse: {
         distances: [],
-        power:12,
+        power:13,
         X: 0,
         Y: 0,
       },
@@ -49,6 +49,7 @@ export default {
     this.svg = document.getElementById('svg');
     this.init();
     this.animate();
+    
     this.setStyles(); // Add this line
     //********************************************************************** */
     // window.addEventListener('resize', () => {
@@ -69,17 +70,19 @@ export default {
       this.displayText = newText;},
 
       handleMouseOver() {
-      this.mouse.power = 90;
+      this.mouse.power = 80;
       this.changeText('I broke things');
     },
     handleMouseOut() {
-      this.mouse.power = 10;
+      this.mouse.power = 13;
       this.changeText('I make things');
     },
 
       setStyles() {
+        
     const circles = this.svg.querySelectorAll('circle');
     const lines = this.svg.querySelectorAll('line');
+
 
     lines.forEach(line => {
     line.setAttribute('stroke', 'white');
@@ -96,17 +99,27 @@ export default {
     },
     init() {
       this.screenW = window.innerWidth;
-      this.screenH = window.innerHeight;
-
+      this.screenH = 620;
+            // Check if the screen width is less than a certain threshold (e.g., 600 pixels)
+  if (window.innerWidth < 600) {
+    this.dotNumber = 160; // Set the desired number of dots for mobile size
+  } else {
+    this.dotNumber = 207; // Set the default number of dots for larger screens
+  }
+  if (window.innerWidth < 600) {
+    this.lineNumber = 5; // Set the desired number of dots for mobile size
+  } else {
+    this.lineNumber = 6; // Set the default number of dots for larger screens
+  }
       this.dotRows = Math.sqrt(this.dotNumber * (this.screenH / this.screenW));
       this.dotColumns = this.dotNumber / this.dotRows;
       var dotPosStepX = Math.round(this.screenW / this.dotColumns);
       var dotPosStepY = Math.round(this.screenH / this.dotRows);
       this.dotRows = Math.round(this.dotRows);
       this.dotColumns = Math.round(this.dotColumns);
-      const fixedHeight = 650; // Change this value to your desired height
-  this.svg.setAttribute('height', fixedHeight);
-      // this.svg.setAttribute('height', this.screenH);
+  //     const fixedHeight = 600; // Change this value to your desired height
+  // this.svg.setAttribute('height', fixedHeight);
+      this.svg.setAttribute('height', this.screenH);
       for (let i = 0, j = 0, k = 0; i < this.dotNumber; i++, k++) {
         if (i % this.dotColumns === 0) {
           j++;
@@ -221,11 +234,14 @@ export default {
 <style scoped>
 .dc {
   margin: 0;
+  
 }
-
+.h{
+  height: 50% !important;
+}
 svg, html, body {
   box-sizing: border-box;
-  height: 100%;
+  height: 50%;
   width: 100%;
   padding: 0;
   margin: 0;
@@ -245,7 +261,7 @@ svg line {
 .text-glitch {
   text-transform: uppercase;
   font-size: calc(18vmin + 8*(100vw - 400px)/ 480);
-  font-size:11vw;
+  font-size:11.5vw;
   cursor: pointer;
   position: relative;
   z-index: 1000;
