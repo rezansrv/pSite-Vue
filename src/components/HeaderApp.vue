@@ -4,7 +4,7 @@
     <ul class="links">
       <li>
         <a href="https://github.com/Rezansrv" target="_blank" rel="noopener noreferrer">
-          <img src="../assets/git2.png" alt="GitHub" style="width: 24px; height: 24px; margin-bottom: 10px;" />
+          <img src="../assets/git2.png" alt="GitHub" style="width: 30px; height: 28px; margin-top: -3px;" />
         </a>
       </li>
       <li>writing</li>
