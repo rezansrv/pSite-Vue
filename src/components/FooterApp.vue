@@ -2,7 +2,7 @@
 
 
 <footer class="footer">
-  <p>&copy; 2019-2023 Reza Naserivand</p>
+  <p>&copy; 2023 Reza Naserivand</p>
   <div class="social-icons">
     <a href="https://github.com/Rezansrv" target="_blank" rel="noopener noreferrer">
       <img src="../assets/git.png" alt="GitHub" />
@@ -28,9 +28,12 @@
       padding: 20px;
       bottom: 0;
     }
-  
+    .footer p{
+      font-size:16px ;
+    }
     .social-icons {
-      margin-top: 10px;
+      margin-top: 12px;
+      margin-bottom: 20px;
     }
   
     .social-icons a {
@@ -38,8 +41,8 @@
     }
   
     .social-icons img {
-      width: 30px; /* تنظیم اندازه لوگوها */
-      height: 30px;
+      width: 35px; /* تنظیم اندازه لوگوها */
+      height: 35px;
     }
   </style>
   
