@@ -33,6 +33,7 @@ export default {
       dotColumns: 0,
       dotRows: 0,
       dotRandomMax: 2,
+      isInitialized: false,
       mouseMoving: false,
       mouse: {
         distances: [],
@@ -49,11 +50,12 @@ export default {
     this.init();
     this.animate();
     this.setStyles(); // Add this line
-    window.addEventListener('resize', () => {
-      this.destroy();
-      this.init();
+    //********************************************************************** */
+    // window.addEventListener('resize', () => {
+    //   this.destroy();
+    //   this.init();
       
-    });
+    // });
     this.svg.addEventListener('mousemove', (e) => {
   const svgRect = this.svg.getBoundingClientRect();
   this.mouseMoving = true;
