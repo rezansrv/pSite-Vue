@@ -1,7 +1,7 @@
 <template>
   <div>
     <Head/>
-    <main class="prjects">
+    <main class="projects">
       <section class="projectheading">
         <h1>Projects</h1>
       </section>
@@ -102,7 +102,7 @@ export default {
 </script>
 
 <style scoped>
-.prjects{
+.projects{
   margin-top: 64px;
 }
 .projectheading {
@@ -110,11 +110,12 @@ export default {
   top: 35%;
   left: 10px;
   transform: translateY(-50%) rotate(90deg);
-  font-size: 2rem;
   font-family: 'Gotham XNarrow A', 'Gotham XNarrow B', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
   text-transform: uppercase;
   font-weight: 500;
   font-style: normal;
+  font-size: 8vmin;
+  padding-bottom: 30px;
   color: #fff;
   z-index: 999;
 }
@@ -124,7 +125,7 @@ export default {
   flex-direction: column;
   justify-content: center;
   margin: 0 auto;
-  width: 480px;
+  width: 520px;
 }
 .github h2{
   font-size: 40px;
@@ -169,10 +170,10 @@ li[data-v-0fea1b4d], p[data-v-0fea1b4d] {
   color: #b5b3b3;
   font-size: 18px;
 }
-@media (max-width: 600px) {
-  .prjects{
-    padding: 25px;
-
+@media (max-width: 780px) {
+  .projects{
+    margin-top: 35px;
+    padding: 20px;
   }
   .github{
     max-width: 380px;
