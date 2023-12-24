@@ -140,8 +140,12 @@ export default {
 
 
 }
-.github-table tr{
+.github-table td{
 
+}
+.github-table td:hover{
+  filter: brightness(150%);
+  transition: all .7s ease;
 }
 .github-table td{
   border-bottom: 1px solid #4b4a4a;
@@ -176,7 +180,7 @@ li[data-v-0fea1b4d], p[data-v-0fea1b4d] {
     padding: 20px;
   }
   .github{
-    max-width: 380px;
+    max-width: 355px;
   }
   .projectheading{
     display: flex;
