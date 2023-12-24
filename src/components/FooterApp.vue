@@ -26,7 +26,7 @@
       font-family: Barlow, Barlow fallback, sans-serif;
       text-align: center;
       padding: 20px;
-      bottom: 0;
+
     }
     .footer p{
       font-size:16px ;
@@ -45,4 +45,3 @@
       height: 35px;
     }
   </style>
-  
