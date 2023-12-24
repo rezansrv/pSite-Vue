@@ -1,43 +1,70 @@
 <template class="dc">
-  <div class="h">
-    <svg id="svg" style="height:0% ">
-      <text
-          x="50%"
-          y="55%"
-          font-size="150"
-          text-anchor="middle"
-          fill="white"
-          @mouseover="handleMouseOver"
-          @mouseout="handleMouseOut"
-          class="text-glitch"
-          style="z-index: 1000"
-      >
-        {{ displayText }}
-      </text>
-    </svg>
+
+    <div class="h">
+<HeaderApp/>
+      <svg id="svg" style="height:0% ">
+        <text
+            x="50%"
+            y="55%"
+            font-size="150"
+            text-anchor="middle"
+            fill="white"
+            @mouseover="handleMouseOver"
+            @mouseout="handleMouseOut"
+            class="text-glitch"
+            style="z-index: 1000"
+        >
+          {{ displayText }}
+        </text>
+      </svg>
+
+
   </div>
+
 </template>
 <script>
 
+import HeadApp from "../components/HeaderApp.vue";
+import FooterApp from "../components/FooterApp.vue";
+import HeaderApp from "@/components/HeaderApp.vue";
+
+
 export default {
+  components: {HeaderApp},
   data() {
     return {
 
-      displayText: 'I make things', // افزودن متغیر برای نمایش متن
+      displayText: 'COME SOON', // افزودن متغیر برای نمایش متن
+      components: {
+        HeadApp,
+        FooterApp
+      }
     };
   },
 
   mounted() {
+    this.svg = document.getElementById('svg');
+    this.init();
     this.animate();
 
+    this.setStyles(); // Add this line
+    //********************************************************************** */
+    // window.addEventListener('resize', () => {
+    //   this.destroy();
+    //   this.init();
 
-
+    // });
+    this.svg.addEventListener('mousemove', (e) => {
+      const svgRect = this.svg.getBoundingClientRect();
+      this.mouseMoving = true;
+      this.mouse.X = e.clientX - svgRect.left; // مختصات X نسبت به SVG
+      this.mouse.Y = e.clientY - svgRect.top; // مختصات Y نسبت به SVG
+    });
   },
   methods: {
     //mouse hover
     changeText(newText) {
-      this.displayText = newText;
-    },
+      this.displayText = newText;},
 
     handleMouseOver() {
       this.mouse.power = 80;
@@ -50,10 +77,23 @@ export default {
 
     setStyles() {
 
+      const circles = this.svg.querySelectorAll('circle');
+      const lines = this.svg.querySelectorAll('line');
 
+
+      lines.forEach(line => {
+        line.setAttribute('stroke', 'white');
+      });
+      circles.forEach(circle => {
+        circle.setAttribute('fill', 'white');
+      })
     },
 
-
+    animate() {
+      this.moveDots();
+      this.mouseInteraction();
+      requestAnimationFrame(this.animate);
+    },
     init() {
       this.screenW = window.innerWidth;
       this.screenH = 620;
@@ -108,7 +148,82 @@ export default {
         }
       }
     },
-  }
+    destroy() {
+      while (this.svg.firstChild) {
+        this.svg.removeChild(this.svg.firstChild);
+      }
+      this.dots.length = 0;
+    },
+    dotUpdate() {
+      for (let i = 0; i < this.dotNumber; i++) {
+        this.dots[i].el.setAttribute('cx', this.dots[i].X);
+        this.dots[i].el.setAttribute('cy', this.dots[i].Y);
+        this.dots[i].el.setAttribute('r', this.dots[i].r);
+        for (let l = 0; l < this.lineNumber; l++) {
+          this.dots[i].lines[l].el.setAttribute('x1', this.dots[i].lines[l].X1);
+          this.dots[i].lines[l].el.setAttribute('y1', this.dots[i].lines[l].Y1);
+          this.dots[i].lines[l].el.setAttribute('x2', this.dots[i].lines[l].X2);
+          this.dots[i].lines[l].el.setAttribute('y2', this.dots[i].lines[l].Y2);
+        }
+      }
+    },
+    getDistance(obj1, obj2) {
+      return Math.floor(Math.sqrt(Math.pow((obj1.X - obj2.X), 2) + Math.pow((obj1.Y - obj2.Y), 2)));
+    },
+    moveDots() {
+      for (let i = 0; i < this.dotNumber; i++) {
+        this.dots[i].X += Math.floor((Math.random() * 5) - 2);
+        this.dots[i].Y += Math.floor((Math.random() * 5) - 2);
+        // Add boundary checks to keep dots within the screen
+        this.dots[i].X = Math.max(0, Math.min(this.screenW, this.dots[i].X));
+        this.dots[i].Y = Math.max(0, Math.min(this.screenH, this.dots[i].Y));
+
+        for (let j = 0; j < this.dotNumber; j++) {
+          this.dots[i].distances[j] = [j, this.getDistance(this.dots[i], this.dots[j])];
+        }
+        this.dots[i].distances = this.dots[i].distances.sort(this.Comparator);
+        for (let k = 0; k < this.lineNumber; k++) {
+          this.dots[i].lines[k].X1 = this.dots[i].X;
+          this.dots[i].lines[k].Y1 = this.dots[i].Y;
+          this.dots[i].lines[k].X2 = this.dots[this.dots[i].distances[k][0]].X;
+          this.dots[i].lines[k].Y2 = this.dots[this.dots[i].distances[k][0]].Y;
+        }
+      }
+      this.dotUpdate();
+    },
+    mouseInteraction() {
+      if (this.mouseMoving) {
+        for (let i = 0; i < this.dotNumber; i++) {
+          this.dots[i].r = 1;
+          this.mouse.distances[i] = [i, this.getDistance(this.mouse, this.dots[i])];
+        }
+        this.mouse.distances = this.mouse.distances.sort(this.Comparator);
+
+        for (let j = 0; j < this.mouse.power && j < this.mouse.distances.length; j++) {
+          let maxDist = this.mouse.distances[this.mouse.power - 1][1];
+          let thisDist = this.mouse.distances[j][1];
+          this.dots[this.mouse.distances[j][0]].r = 2;
+
+          if (this.mouse.X >= this.dots[this.mouse.distances[j][0]].X) {
+            this.dots[this.mouse.distances[j][0]].X -= (maxDist - thisDist) / 15;
+          } else {
+            this.dots[this.mouse.distances[j][0]].X += (maxDist - thisDist) / 15;
+          }
+          if (this.mouse.Y >= this.dots[this.mouse.distances[j][0]].Y) {
+            this.dots[this.mouse.distances[j][0]].Y -= (maxDist - thisDist) / 15;
+          } else {
+            this.dots[this.mouse.distances[j][0]].Y += (maxDist - thisDist) / 15;
+          }
+        }
+        this.mouseMoving = false;
+      }
+    },
+    Comparator(a, b) {
+      if (a[1] < b[1]) return -1;
+      if (a[1] > b[1]) return 1;
+      return 0;
+    },
+  },
 };
 </script>
 
@@ -127,7 +242,6 @@ svg, html, body {
   width: 100%;
   padding: 0;
   margin: 0;
-  background-image: radial-gradient(circle, rgb(20, 22, 24), #111827);
 }
 
 svg circle {

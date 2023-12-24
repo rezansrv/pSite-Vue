@@ -8,7 +8,7 @@
             <img src="../assets/git2.png" alt="GitHub" style="width: 29px; height: 28px; margin-top: -3px;" />
           </a>
         </li>
-        <li><router-link class="navLink" to="/speaking">speaking</router-link></li>
+<!--        <li><router-link class="navLink" to="/speaking">speaking</router-link></li>-->
         <li><router-link class="navLink" to="/writing">writing</router-link></li>
         <li><router-link class="navLink" to="/projects">projects</router-link></li>
       </ul>
