@@ -71,7 +71,7 @@ export default {
 
       handleMouseOver() {
       this.mouse.power = 80;
-      this.changeText('I broke things');
+      this.changeText('I breake things');
     },
     handleMouseOut() {
       this.mouse.power = 13;
