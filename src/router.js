@@ -1,4 +1,3 @@
-// router.js
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import App from './pages/home.vue';
@@ -11,11 +10,11 @@ const routes = [
     { path: '/', component: App },
     { path: '/projects', component: Projects },
     { path: '/writing', component: WritingMy }
-
 ];
 
 const router = new VueRouter({
-    routes
+    routes,
+    mode: 'history' // enable HTML5 history mode
 });
 
 export default router;
