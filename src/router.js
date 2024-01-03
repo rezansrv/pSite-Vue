@@ -14,7 +14,7 @@ const routes = [
 
 const router = new VueRouter({
     routes,
-    mode: 'history' // enable HTML5 history mode
+    mode: 'history' // enable history mode
 });
 
 export default router;
