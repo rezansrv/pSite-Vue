@@ -11,6 +11,7 @@
 <!--        <li><router-link class="navLink" to="/speaking">speaking</router-link></li>-->
         <li><router-link class="navLink" to="/writing">writing</router-link></li>
         <li><router-link class="navLink" to="/projects">projects</router-link></li>
+        <li><router-link class="navLink" to="/">Home</router-link></li>
       </ul>
       <router-view></router-view>
     </div>
@@ -51,6 +52,7 @@
   color: #fff;
   font-size: 24px;
   font-weight: bold;
+  white-space: nowrap;
 }
 
 .links {
@@ -58,6 +60,7 @@
   display: flex;
   gap: 20px;
   margin: 0;
+
 }
 
 .links li {
@@ -74,6 +77,23 @@
   text-decoration: underline;
 }
 
+
+@media (max-width: 740px) {
+
+  .links {
+    padding-top: 25px;
+  }
+  .links li{
+    font-size: 20px;
+  }
+
+  .nav {
+    flex-direction: column;
+    text-align: center;
+  }
+
+}
+
 @media (max-width: 600px) {
   .nav {
     flex-direction: column;
@@ -81,7 +101,14 @@
   }
 
   .links {
-    margin-top: 10px;
+    padding-top: 25px;
+  }
+  .links li{
+    font-size: 5vw;
+  }
+
+  .logo{
+    font-size: 6vw;
   }
 }
 </style>

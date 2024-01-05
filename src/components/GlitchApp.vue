@@ -1,16 +1,15 @@
-<template class="dc">
-  <div class="h">
-    <svg id="svg" style="height:0% "> 
+<template>
+  <div>
+    <svg id="svg">
     <text
   x="50%"
-  y="55%"
+  y="50%"
   font-size="150"
   text-anchor="middle"
   fill="white"
   @mouseover="handleMouseOver"
   @mouseout="handleMouseOut"
   class="text-glitch"
-  style="z-index: 1000"
 >
   {{ displayText }}
 </text>
@@ -71,7 +70,7 @@ export default {
 
       handleMouseOver() {
       this.mouse.power = 80;
-      this.changeText('I breake things');
+      this.changeText('I break things');
     },
     handleMouseOut() {
       this.mouse.power = 13;
@@ -145,7 +144,7 @@ export default {
           this.dots[i].lines[l].Y1 = this.dots[i].Y;
           this.dots[i].lines[l].X2 = this.dots[i].X;
           this.dots[i].lines[l].Y2 = this.dots[i].Y;
-          this.dots[i].lines[l].el.setAttribute('stroke', 'rgba(0,255,255,0.05)');
+          this.dots[i].lines[l].el.setAttribute('stroke', 'rgba(0,255,255,0.00)');
           this.dots[i].lines[l].el.setAttribute('stroke-width', '1');
           this.svg.appendChild(this.dots[i].lines[l].el);
         }
@@ -232,13 +231,7 @@ export default {
 
 
 <style scoped>
-.dc {
-  margin: 0;
-  
-}
-.h{
-  height: 50% !important;
-}
+
 svg, html, body {
   box-sizing: border-box;
   height: 50%;
@@ -250,7 +243,7 @@ svg, html, body {
 
 svg circle {
   position: relative;
-  z-index: 100;
+  z-index: 0;
 }
 
 svg line {
@@ -260,14 +253,12 @@ svg line {
 
 .text-glitch {
   text-transform: uppercase;
-  font-size: calc(18vmin + 8*(100vw - 400px)/ 480);
   font-size:11.5vw;
   cursor: pointer;
   position: relative;
   z-index: 1000;
   text-align: center;
   font-family: Gotham XNarrow A, Gotham XNarrow B, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
-  text-transform: uppercase;
   font-weight: bold; /* Changed from 400 to bold */
   font-style: normal;
   color: white;

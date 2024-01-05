@@ -11,7 +11,7 @@
           <tbody class="">
           <tr class="">
             <td class=""><h3 class=""><a class="" href="https://github.com/rezansrv/G2-Intership">G2-Intership</a> <!----></h3>
-              <p data-v-0fea1b4d="">✩ 3 </p>
+              <p data-v-0fea1b4d="">✩ 3</p>
               <p data-v-0fea1b4d="">A site to display courses written with Nuxt2,Vue class based component,Typescript,Tailwindcss
               </p></td>
           </tr>

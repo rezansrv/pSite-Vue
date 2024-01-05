@@ -1,7 +1,10 @@
 <template>
-    <div class="welcome-container">
-      <div class="center">
-        <!-- <img src="path/to/profile-image.jpg" alt="Profile Image" class="profile-image" /> -->
+  <div class="welcome-container">
+    <div class="center">
+      <div class="image-container">
+        <div class="profile-image"></div>
+      </div>
+      <div class="text-container">
         <h1>Welcome!</h1>
         <p>
           Reza Naserivand is a dedicated and highly skilled front-end developer with
@@ -18,39 +21,76 @@
         </p>
       </div>
     </div>
-  </template>
-  
-  <style>
-    .welcome-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: #111827;
-      font-family: Barlow, Barlow fallback, sans-serif;
-      padding: 50px;
-      padding-top: 80px;
-          }
-  
-    .center {
-      max-width: 800px;
-      color: #ffffff;
-    }
-  
-    .profile-image {
-      width: 150px; 
-      border-radius: 50%; 
-      margin-bottom: 20px;
-    }
-  
-    h1 {
-      font-size: 36px;
-      margin-bottom: 20px;
-    }
-  
-    p {
-      font-size: 18px;
-      line-height: 1.6;
-      margin-bottom: 15px;
-    }
-  </style>
-  
+  </div>
+</template>
+
+<style>
+.welcome-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #111827;
+  font-family: Barlow, Barlow fallback, sans-serif;
+  padding: 50px;
+  padding-top: 80px;
+}
+
+.center {
+  max-width: 800px;
+  color: #ffffff;
+  align-items: center;
+}
+
+.image-container {
+  position: relative;
+}
+
+.profile-image {
+  width: 220px;
+  height: 220px;
+  background-image: url("../assets/me.jpg");
+  background-size: cover;
+  border-radius: 50%;
+  shape-outside: circle(50%);
+  float: left;
+  margin-right: 20px;
+  text-align: left;
+
+}
+
+.text-container {
+  flex: 1;
+}
+
+h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+@media (max-width: 600px) {
+  .welcome-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+  }
+  .image-container {
+    position: relative;
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+  }
+  .profile-image{
+    display: flex;
+    shape-outside: none;
+    text-align: center;
+    margin: 25px 25px 64px;
+  }
+}
+</style>
