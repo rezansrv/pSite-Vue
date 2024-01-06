@@ -2,7 +2,7 @@
 
 
 <footer class="footer">
-  <p>&copy; 2023 Reza Naserivand</p>
+  <p>&copy; 2024 Reza Naserivand</p>
   <div class="social-icons">
     <a href="https://github.com/Rezansrv" target="_blank" rel="noopener noreferrer">
       <img src="../assets/git.png" alt="GitHub" />
