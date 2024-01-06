@@ -105,7 +105,7 @@ export default {
 .projects{
   margin-top: 64px;
 }
-.projectheading {
+.projectheading{
   position: fixed;
   top: 35%;
   left: 10px;
@@ -135,10 +135,18 @@ export default {
   font-style: normal;
   color: #fff;
 }
+h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
 .github-table{
   border-collapse: collapse;
-
-
 }
 .github-table td{
 

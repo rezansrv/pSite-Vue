@@ -2,7 +2,7 @@
   <div class="welcome-container">
     <div class="center">
       <div class="image-container">
-        <div class="profile-image"></div>
+        <div class="profile-image" ></div>
       </div>
       <div class="text-container">
         <h1>Welcome!</h1>
@@ -24,7 +24,7 @@
   </div>
 </template>
 
-<style>
+<style scoped>
 .welcome-container {
   display: flex;
   justify-content: center;

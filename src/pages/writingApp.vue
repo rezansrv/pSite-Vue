@@ -1,6 +1,6 @@
-<template class="dc">
+<template>
 
-    <div class="h">
+    <div >
 <HeaderApp/>
       <svg id="svg" style="height:0% ">
         <text
@@ -229,13 +229,8 @@ export default {
 
 
 <style scoped>
-.dc {
-  margin: 0;
 
-}
-.h{
-  height: 50% !important;
-}
+
 svg, html, body {
   box-sizing: border-box;
   height: 50%;

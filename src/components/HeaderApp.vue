@@ -1,4 +1,4 @@
-<template>
+<template  style="border-bottom: white">
   <header class="header">
     <div class="nav">
       <router-link class="logo" to="/">REZA NASERIVAND</router-link>
@@ -21,11 +21,17 @@
 
 <style scoped>
 
-
+.header{
+  border: white;
+}
 .navLink {
   text-decoration: none;
+
+
 }
 
+.navLink:focus-visible{
+}
 .navLink:active {
   text-decoration: underline;
 }
@@ -102,6 +108,7 @@
 
   .links {
     padding-top: 25px;
+    border: 2px white;
   }
   .links li{
     font-size: 5vw;
@@ -111,6 +118,7 @@
     font-size: 6vw;
   }
 }
+
 </style>
 <script setup>
 </script>

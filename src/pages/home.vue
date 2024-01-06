@@ -30,8 +30,4 @@ export default {
   margin: 0;
   background-color: #111827;
 }
-.g2{
-  height: 10px;
-  background-color: black;
-}
 </style>
