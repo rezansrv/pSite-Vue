@@ -128,7 +128,7 @@ a, a:active, a:visited, p a, p a:active, p a:visited {
 .seepost{
   display: flex;
   border: none;
-  width: 100px;
+  width: 120px;
   padding: 10px;
   margin-top:10px;
   margin-bottom: 10px;
