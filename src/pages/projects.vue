@@ -73,13 +73,6 @@
 
               </p></td>
           </tr>
-
-
-
-
-
-
-
           </tbody>
         </table>
       </section>
@@ -107,14 +100,14 @@ export default {
 }
 .projectheading{
   position: fixed;
-  top: 35%;
+  top: 55%;
   left: 10px;
   transform: translateY(-50%) rotate(90deg);
   font-family: 'Gotham XNarrow A', 'Gotham XNarrow B', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
   text-transform: uppercase;
   font-weight: 500;
   font-style: normal;
-  font-size: 8vmin;
+  font-size: 5vmin;
   padding-bottom: 30px;
   color: #fff;
   z-index: 999;
@@ -135,21 +128,15 @@ export default {
   font-style: normal;
   color: #fff;
 }
-h1 {
-  font-size: 36px;
-  margin-bottom: 20px;
-}
 
-p {
+.github-table{
+  border-collapse: collapse;
+  margin-top: 32px;
+}
+.github-table td p{
   font-size: 18px;
   line-height: 1.6;
   margin-bottom: 15px;
-}
-.github-table{
-  border-collapse: collapse;
-}
-.github-table td{
-
 }
 .github-table td:hover{
   filter: brightness(150%);

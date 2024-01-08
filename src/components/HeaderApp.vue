@@ -46,7 +46,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 28px;
+  padding: 30px;
   padding-inline: 80px;
   background-color: #111827;
   color: #ededed;
@@ -71,7 +71,7 @@
 
 .links li {
   cursor: pointer;
-  font-size: 18px;
+  font-size: 20px;
 }
 
 .links li a {
