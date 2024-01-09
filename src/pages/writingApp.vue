@@ -13,7 +13,7 @@
             <td class=""><h3 class=""><a class="" href="https://g2tech.co/the-best-front-end-design-patterns/">The best Front-End Design Patterns</a> <!----></h3>
               <p class="post-publish">
                 Published on Jan 7, 2024, on <a href="https://g2tech.co/">g2tech.co</a>.
-                <span style="margin-left: 8px"> Reading time: 10 min.</span>
+                <span style="margin-left: 8px;">time: 10 min.</span>
               </p>
               <p data-v-0fea1b4d="" class="post-describe">Explore how these design patterns can revolutionize your front-end development,
                 offering solutions to common challenges and elevating aspects like code organization, maintainability,
@@ -88,6 +88,7 @@ export default {
 .post-publish {
   line-height: 1.6;
   margin-bottom: 15px;
+  font-family: Gotham XNarrow A,Gotham XNarrow B,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif;
   color: white;
   font-size: 14px;
 }
@@ -128,12 +129,13 @@ a, a:active, a:visited, p a, p a:active, p a:visited {
 .seepost{
   display: flex;
   border: none;
-  width: 120px;
+  width: 110px;
   padding: 10px;
   margin-top:10px;
   margin-bottom: 10px;
   border-radius: 20px;
   color: #fff;
+  align-items: center;
   background: #aa0753;
   right: 0;
   -webkit-box-shadow: 2px 5px 10px 2px #000;
