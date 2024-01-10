@@ -11,13 +11,13 @@
           <tbody class="">
           <tr class="">
             <td class=""><h3 class=""><a class="" href="https://github.com/rezansrv/G2-Intership">G2-Intership</a> <!----></h3>
-              <p data-v-0fea1b4d="">✩ 3</p>
+              <p data-v-0fea1b4d="">✩ 5</p>
               <p data-v-0fea1b4d="">A site to display courses written with Nuxt2,Vue class based component,Typescript,Tailwindcss
               </p></td>
           </tr>
           <tr class="">
             <td class=""><h3 class=""><a class="" href="https://github.com/rezansrv/online-shop">online-shop</a> <!----></h3>
-              <p data-v-0fea1b4d="">✩ 3</p>
+              <p data-v-0fea1b4d="">✩ 4</p>
               <p data-v-0fea1b4d="">Online shop with api that has a shopping cart section and is written with vue, pinia ,vuetify,vite;
               </p></td>
           </tr>
@@ -29,31 +29,31 @@
           </tr>
           <tr class="">
             <td class=""><h3 class=""><a class="" href="https://github.com/rezansrv/Employees-List-Vue">Employees-List-Vue</a> <!----></h3>
-              <p data-v-0fea1b4d="">✩ 3</p>
+              <p data-v-0fea1b4d="">✩ 4</p>
               <p data-v-0fea1b4d="">Employees List with Vue2 and api with Json Server have login and registry pages with routing and have task Todo list with using vuex
               </p></td>
           </tr>
           <tr class="">
             <td class=""><h3 class=""><a class="" href="https://github.com/rezansrv/Reza_photo_gallery">Reza_photo_gallery</a> <!----></h3>
-              <p data-v-0fea1b4d="">✩ 3</p>
+              <p data-v-0fea1b4d="">✩ 4</p>
               <p data-v-0fea1b4d="">Building a personal site to display and download photos taken by myself with lazy loading photos
               </p></td>
           </tr>
           <tr class="">
             <td class=""><h3 class=""><a class="" href="https://github.com/rezansrv/Admin-Dashboard">Admin-Dashboard</a> <!----></h3>
-              <p data-v-0fea1b4d="">✩ 3</p>
+              <p data-v-0fea1b4d="">✩ 4</p>
               <p data-v-0fea1b4d="">Responsive Admin Dashboard Using HTML CSS & JavaScript with Light & Dark Mode
               </p></td>
           </tr>
           <tr class="">
             <td class=""><h3 class=""><a class="" href="https://github.com/rezansrv/weatherApp">weatherApp</a> <!----></h3>
-              <p data-v-0fea1b4d="">✩ 2</p>
+              <p data-v-0fea1b4d="">✩ 3</p>
               <p data-v-0fea1b4d="">Weather app with openweather API
               </p></td>
           </tr>
           <tr class="">
             <td class=""><h3 class=""><a class="" href="https://github.com/rezansrv/DFA-Minimizetion-JS">DFA-Minimizetion-JS</a> <!----></h3>
-              <p data-v-0fea1b4d="">✩ 1</p>
+              <p data-v-0fea1b4d="">✩ 3</p>
               <p data-v-0fea1b4d="">A tool that minimizes deterministic finite automata with a visual interactive graph.
 
                 start drawing and minimizing DFAs!
@@ -61,13 +61,13 @@
           </tr>
           <tr class="">
             <td class=""><h3 class=""><a class="" href="https://github.com/rezansrv/Natural-language-processing-NLP-">Natural-language-processing-NLP-</a> <!----></h3>
-              <p data-v-0fea1b4d="">✩ 1</p>
+              <p data-v-0fea1b4d="">✩ 3</p>
               <p data-v-0fea1b4d="">Multilingual NLP Text Processing in Python
               </p></td>
           </tr>
           <tr class="">
             <td class=""><h3 class=""><a class="" href="https://github.com/rezansrv/website-health-check">website-health-check</a> <!----></h3>
-              <p data-v-0fea1b4d="">✩ 3</p>
+              <p data-v-0fea1b4d="">✩ 4</p>
               <p data-v-0fea1b4d="">A simple version of checking the health of websites with bash script.
 
 
