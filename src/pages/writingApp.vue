@@ -2,8 +2,8 @@
   <div>
     <Head/>
     <main class="writings">
-      <section class="projectheading">
-        <h1 class="animate__animated animate__zoomInUp">Writing</h1>
+      <section class="projectheading animate__animated animate__zoomInUp">
+        <h1 class="">Writing</h1>
       </section>
       <section class="posts-head animate__animated animate__zoomInUp">
         <h2>Blog Post</h2>
@@ -59,7 +59,7 @@ export default {
   font-weight: 500;
   font-style: normal;
   font-size: 5vmin;
-  padding-bottom: 30px;
+ margin-bottom: 30px;
   color: #fff;
   z-index: 999;
 }
@@ -167,6 +167,11 @@ a, a:active, a:visited, p a, p a:active, p a:visited {
     display: flex;
     transform: none;
     position: static;
+    justify-content: center;
+    align-items: center;
+    margin:0 auto 64px auto;
+    outline-style: double;
+    max-width: 345px;
   }
 }
 </style>

@@ -2,8 +2,8 @@
   <div>
     <Head/>
     <main class="projects">
-      <section class="projectheading">
-        <h1 class="animate__animated animate__zoomInUp">Projects</h1>
+      <section class="projectheading animate__animated animate__zoomInUp">
+        <h1 class="">Projects</h1>
       </section>
       <section class="github animate__animated animate__zoomInUp">
         <h2>github</h2>
@@ -105,7 +105,7 @@ export default {
   font-weight: 500;
   font-style: normal;
   font-size: 5vmin;
-  padding-bottom: 30px;
+ margin-bottom: 30px;
   color: #fff;
   z-index: 999;
 }
@@ -174,12 +174,16 @@ li[data-v-0fea1b4d], p[data-v-0fea1b4d] {
     padding: 20px;
   }
   .github{
-    max-width: 355px;
+    max-width: 345px;
   }
   .projectheading{
     display: flex;
     transform: none;
     position: static;
+    justify-content: center;
+    margin:0 auto 64px auto;
+    outline-style: double;
+    max-width: 345px;
   }
 }
 </style>
