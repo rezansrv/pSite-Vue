@@ -102,7 +102,7 @@ export default {
 }
 .posts-table td{
   border-bottom: 1px solid #4b4a4a;
-  padding: 0.8rem 0;
+  padding:0.8rem 0.4rem 0.8rem 0.4rem;
   text-align: left;
 }
 .posts-table td h3 {

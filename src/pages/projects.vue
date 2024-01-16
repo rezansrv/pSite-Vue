@@ -141,7 +141,7 @@ export default {
 }
 .github-table td{
   border-bottom: 1px solid #4b4a4a;
-  padding: 0.8rem 0;
+  padding:0.8rem 0.4rem 0.8rem 0.4rem;
   text-align: left;
 }
 .github-table td h3 {
