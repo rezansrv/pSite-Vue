@@ -3,9 +3,9 @@
     <Head/>
     <main class="projects">
       <section class="projectheading">
-        <h1>Projects</h1>
+        <h1 class="animate__animated animate__zoomInUp">Projects</h1>
       </section>
-      <section class="github">
+      <section class="github animate__animated animate__zoomInUp">
         <h2>github</h2>
         <table class="github-table">
           <tbody class="">
@@ -55,7 +55,6 @@
             <td class=""><h3 class=""><a class="" href="https://github.com/rezansrv/DFA-Minimizetion-JS">DFA-Minimizetion-JS</a> <!----></h3>
               <p data-v-0fea1b4d="">✩ 3</p>
               <p data-v-0fea1b4d="">A tool that minimizes deterministic finite automata with a visual interactive graph.
-
                 start drawing and minimizing DFAs!
               </p></td>
           </tr>
@@ -69,8 +68,6 @@
             <td class=""><h3 class=""><a class="" href="https://github.com/rezansrv/website-health-check">website-health-check</a> <!----></h3>
               <p data-v-0fea1b4d="">✩ 4</p>
               <p data-v-0fea1b4d="">A simple version of checking the health of websites with bash script.
-
-
               </p></td>
           </tr>
           </tbody>
@@ -158,13 +155,15 @@ export default {
 }
 .github h3 a {
   color: #dcdbdb;
-  font-weight: 400;
+  font-weight: 700;
 }
+
 a, a:active, a:visited, p a, p a:active, p a:visited {
   text-decoration: none;
   color: #fff;
   font-weight: 700;
 }
+
 li[data-v-0fea1b4d], p[data-v-0fea1b4d] {
   color: #b5b3b3;
   font-size: 18px;

@@ -1,7 +1,7 @@
 <template>
-  <div >
+  <div>
     <Head/>
-    <Glitch/>
+    <Glitch class="animate__animated animate__backInUp"/>
     <AboutME/>
     <FooterApp/>
   </div>

@@ -238,7 +238,7 @@ svg, html, body {
   width: 100%;
   padding: 0;
   margin: 0;
-  background-image: radial-gradient(circle, rgb(20, 22, 24), #111827);
+  background: #111827 ;
 }
 
 svg circle {

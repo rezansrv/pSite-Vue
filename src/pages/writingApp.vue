@@ -3,9 +3,9 @@
     <Head/>
     <main class="writings">
       <section class="projectheading">
-        <h1>Writing</h1>
+        <h1 class="animate__animated animate__zoomInUp">Writing</h1>
       </section>
-      <section class="posts-head">
+      <section class="posts-head animate__animated animate__zoomInUp">
         <h2>Blog Post</h2>
         <table class="posts-table">
           <tbody class="">
@@ -48,7 +48,6 @@ export default {
 <style scoped>
 .writings{
   margin-top: 64px;
-
 }
 .projectheading{
   position: fixed;
@@ -79,7 +78,6 @@ export default {
   font-weight: 500;
   font-style: normal;
   color: #fff;
-
 }
 .posts-table{
   border-collapse: collapse;
