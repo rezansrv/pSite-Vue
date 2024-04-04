@@ -10,7 +10,7 @@
         <table class="posts-table">
           <tbody class="">
           <tr class="">
-            <td class=""><h3 class=""><a class="" href="https://g2tech.co/the-best-front-end-design-patterns/">The best Front-End Design Patterns</a> <!----></h3>
+            <td class=""><h3 class=""><a class="" href="https://g2tech.co/the-best-front-end-design-patterns/">Front-End Security</a> <!----></h3>
               <p class="post-publish">
                 Published on Jan 7, 2024, on <a href="https://g2tech.co/">g2tech.co</a>.
                 <span style="margin-left: 8px;">time: 10 min.</span>
@@ -22,6 +22,20 @@
                 patterns in the frontend domain.
               </p>
               <a href="https://g2tech.co/the-best-front-end-design-patterns/" class="seepost">see post ⟶</a>
+            </td>
+          </tr>
+          <tr class="">
+            <td class=""><h3 class=""><a class="" href="https://g2tech.co/front-end-security/">The best Front-End Design Patterns</a> <!----></h3>
+              <p class="post-publish">
+                Published on Mar 29, 2024, on <a href="https://g2tech.co/">g2tech.co</a>.
+                <span style="margin-left: 8px;">time: 5 min.</span>
+              </p>
+              <p data-v-0fea1b4d="" class="post-describe">Front-end security refers to the measures and practices implemented to
+              protect the client-side components of a web application, such as web browsers, user interfaces, and client-side scripts,
+                from various security threats and vulnerabilities. Ensuring front-end security is crucial for safeguarding sensitive data,
+              maintaining user privacy, and preventing unauthorized access to web applications.
+              </p>
+              <a href="https://g2tech.co/front-end-security/" class="seepost">see post ⟶</a>
             </td>
           </tr>
           </tbody>
