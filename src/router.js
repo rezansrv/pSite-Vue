@@ -6,7 +6,7 @@ Vue.use(VueRouter);
 const routes = [
     { path: '/', component: () => import('./pages/home.vue') },
     { path: '/projects', component: () => import('./pages/projects.vue') },
-    { path: '/writing', component: () => import('./pages/writingApp.vue') }
+    { path: '/writing', component: () => import('./pages/writing.vue') }
 ];
 
 const router = new VueRouter({
